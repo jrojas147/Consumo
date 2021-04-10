@@ -1,0 +1,44 @@
+@import '../scss/variables';
+@import '../scss/mixins';
+
+
+ .Botones{
+    //  background-position: top center;
+    //  margin: 1rem;
+    //  padding: 1rem;
+     text-align: center;
+     vertical-align: auto;
+     line-height: 100px;
+ }
+
+.contenedor{
+    grid-row: 1;
+    grid-column: 1;
+   // background-image: url(../assets/img/fondo2.jpg);
+    background-image: url(../assets/img/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    @include Asmall(){
+        background-image: none;
+    }
+}
+
+.superContenedor{
+    display: grid;
+    grid-template-rows: 1;
+    .splash{
+        grid-row: 1;
+        grid-column: 1;
+        background-color: $colorPrimario;
+        height: 100vh;
+        z-index: 2;
+        display: grid;
+        img{
+            align-self: center;
+            justify-self: center
+        }
+    }
+}

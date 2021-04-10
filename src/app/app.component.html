@@ -1,0 +1,33 @@
+<div class="superContenedor">
+    <div *ngIf="splash" class="splash" [@animationFadeOut]="splash">
+        <img [src]="const.santanderBlanco" alt="">
+    </div>
+    <div class="contenedor">
+        <app-encabezado></app-encabezado>
+        <!-- <div style="background-image: url({{fondo}});">
+            {{fondo}}
+            <style>
+                body {
+                  background-image: url(../assets/img/fondo2.jpg);
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-size: cover;
+                }
+                </style> -->
+
+
+        
+
+
+        <div *ngIf="tipo === ''; else elseDiv">
+            <div class="Botones">
+               <button (click)="selectTipo('carro')" class="boton1">Carro</button>
+               <button (click)="selectTipo('moto')">Moto</button>
+            </div>
+        </div>
+        <ng-template #elseDiv>
+            <app-componentepasos [tipoSelected]="tipo"></app-componentepasos>
+        </ng-template>
+        <app-pie></app-pie>
+    </div>
+</div>

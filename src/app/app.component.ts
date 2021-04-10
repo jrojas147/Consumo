@@ -1,0 +1,58 @@
+import { Component } from '@angular/core';
+import { Constantes } from '../constantes/constantes';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { ConsultaCentralesService } from './servicios/consultaCentrales.service';
+import { ScanparamsService } from './servicios/scanparams.service';
+
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    trigger('animationFadeOut', [
+      transition(':enter', [
+        style({ opacity: '1' }),
+        animate(300)
+      ]),
+      transition(':leave', [
+        animate(300, style({ opacity: '0' }))
+      ]),
+      state('*', style({ opacity: '1' })),
+    ])
+  ]
+})
+export class AppComponent {
+  const = Constantes;
+  splash = true;
+  tipo: string = '';
+  fondo: any;//Nuevo
+x: any;//
+  constructor(public consultaCentrales: ConsultaCentralesService,
+              public scanParams: ScanparamsService) {
+    this.scanParams.getParam();
+    this.splashToggle();
+  }
+
+  splashToggle() {
+    setTimeout(() => {
+      this.splash = false;
+      this.consultaCentrales.linkOrigen = document.referrer;
+    }, 2000);
+  }
+
+  selectTipo(tipoSelect :string) {
+    this.tipo = tipoSelect;
+   // CrearValores(){//Creado nuevo
+    this.fondo = this.tipo === 'carro' ? this.const.carro.fondo : this.const.moto.fondo;//Nuevo
+  //  this.x.style.backgroundImage =  'url('+this.fondo+')';
+  //   debugger;
+
+    // var p = document.createElement('p');
+    // p.style.background = 'url('+this.fondo+')';
+    // debugger
+   
+   // document.body.style.backgroundImage = this.fondo;
+
+  }
+}
