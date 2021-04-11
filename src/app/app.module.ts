@@ -19,7 +19,6 @@ import { MaterialModule } from './material/material.module';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { ModalTycComponent } from './componentes/modal-tyc/modal-tyc.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TipoVehiculoComponent } from './componentes/tipo-moto/tipo-vehiculo.component';
 
 registerLocaleData(localeEs, 'es');
 
@@ -32,8 +31,7 @@ registerLocaleData(localeEs, 'es');
     PasotresComponent,
     EncabezadoComponent,
     PieComponent,
-    ModalTycComponent,
-    TipoVehiculoComponent
+    ModalTycComponent
   ],
   imports: [
     BrowserModule,
