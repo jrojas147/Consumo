@@ -26,8 +26,8 @@ export class AppComponent {
   const = Constantes;
   splash = true;
   tipo: string = '';
-  fondo: any;//Nuevo
-x: any;//
+  //fondo: any;
+  //x: any;//
   constructor(public consultaCentrales: ConsultaCentralesService,
               public scanParams: ScanparamsService) {
     this.scanParams.getParam();
