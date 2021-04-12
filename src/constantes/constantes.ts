@@ -145,6 +145,7 @@ export const Constantes = {
   negado: './assets/img/negado.png',
   fondo: './assets/img/fondo2.jpg',
   fondomoto: './assets/img/fondo-moto.jpg',
+  fondomotoduke: './assets/img/360_KTM_390_DUKE.png',
   cliente: './assets/img/consumerFinance.png',
   santander: './assets/img/consumerFinance.png',
   santanderGris: './assets/img/consumerFinanceGris.png',
