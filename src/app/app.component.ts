@@ -43,16 +43,7 @@ x: any;//
 
   selectTipo(tipoSelect :string) {
     this.tipo = tipoSelect;
-   // CrearValores(){//Creado nuevo
-    this.fondo = this.tipo === 'carro' ? this.const.carro.fondo : this.const.moto.fondo;//Nuevo
-  //  this.x.style.backgroundImage =  'url('+this.fondo+')';
-  //   debugger;
-
-    // var p = document.createElement('p');
-    // p.style.background = 'url('+this.fondo+')';
-    // debugger
-   
-   // document.body.style.backgroundImage = this.fondo;
-
   }
+
+
 }
